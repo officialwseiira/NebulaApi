@@ -3,7 +3,7 @@ const mysql = require('mysql2/promise');
 require('dotenv').config();
 
 const pool = mysql.createPool({
-    host: "https:/localhost:3306",
+    host: "87.248.157.101:3306",
     user: "wSeiira",
     password: "1C^j1le#SbJ7ozlw",
     database: nebula_forum,
@@ -21,5 +21,6 @@ pool.getConnection()
         console.error('❌ MySQL bağlantı hatası:', err.message);
         console.error('Lütfen .env dosyasındaki bilgileri kontrol edin ve MySQL sunucunuzun çalıştığından emin olun.');
     });
+
 
 module.exports = pool;
